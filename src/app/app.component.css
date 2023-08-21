@@ -1,0 +1,26 @@
+.pinkText{
+    color: rgb(255, 0, 238);
+}
+
+.fromTop{
+    top: 30%;
+}
+
+.cardHStyle{
+width:50%;
+}
+.cardTStyle{
+    background-color: blue;
+}
+
+.formText{
+    color: black;
+    font-weight: bold;
+}
+
+.formBody{
+    align-content:center;
+    border:2px solid rgb(12, 196, 252);
+    padding: 20px;
+    /* border-color: rgb(6, 177, 228); */
+}

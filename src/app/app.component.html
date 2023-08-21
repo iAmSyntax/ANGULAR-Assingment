@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand pinkText">PoolCarz</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto">
+      </div>
+      <div class="text-end pinkText"><span>Logout</span></div>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid" >
+
+  <div class="d-flex justify-content-center mt-5">
+    <div class="card cardHStyle">
+      <div class="card-header bg-primary text-white">Card Ride Registration Form</div>
+      <div class="card-body formBody" >
+        <form [formGroup]="detailsForm" (ngSubmit)="onSubmit()">
+    
+          <div class="mb-3">
+            <label for="InputName" class="form-label formText">Name</label>
+            <input type="text" class="form-control" id="InputName" formControlName="InputName">
+            <div *ngIf="detailsForm.get('InputName').invalid && detailsForm.get('InputName').touched" 
+              class="text-danger">ENTER YOUR NAME</div>
+          </div>
+          <div class="mb-3">
+            <label for="InputStart" class="form-label formText">Start Location</label>
+            <input type="text" class="form-control" id="InputStart" formControlName="InputStart">
+            <div *ngIf="detailsForm.get('InputStart').invalid && detailsForm.get('InputStart').touched" 
+              class="text-danger ">ENTER YOUR START LOCATION</div>
+          </div>
+          <div class="mb-3">
+            <label for="InputDestination" class="form-label formText">Destination</label>
+            <input type="text" class="form-control" id="InputDestination" formControlName="InputDestination">
+            <div *ngIf="detailsForm.get('InputDestination').invalid && detailsForm.get('InputDestination').touched" 
+              class="text-danger ">ENTER YOUR DESTINATION</div>
+          </div>
+          <div class="mb-3">
+            <label for="InputSeats" class="form-label formText">Seats Available</label>
+            <input type="number" class="form-control" id="InputSeats" formControlName="InputSeats">
+            <div *ngIf="detailsForm.get('InputSeats').invalid && detailsForm.get('InputSeats').touched" 
+            class="text-danger ">Enter a num between 0 and 8</div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" [disabled]="detailsForm.invalid">Submit</button>
+          <span class="mx-2"></span>
+          <button class="btn btn-primary">Go-Back</button>
+        </form>
+      </div>
+    </div>
+   
+  </div>
+</div>
